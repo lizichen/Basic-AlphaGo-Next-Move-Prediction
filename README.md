@@ -1,4 +1,4 @@
-##TRAINING A DEEP NEURAL NETWORK FOR COMPUTER GO PLAYER FOR NEXT-MOVE PREDICTION
+## TRAINING A DEEP NEURAL NETWORK FOR COMPUTER GO PLAYER FOR NEXT-MOVE PREDICTION
 #### A Class Project in Computer Vision with Deep Learning, by Rob Fergus, Fall 2016
 
 ### Intro
@@ -55,7 +55,7 @@ Several experiments have been put in practice with various parameter tweaks.
 One thing that needs to be pointed out is the neglection of MCTS in this project. We acknowledge that by all means MCTS; a powerful value and fast-policy network that helps to rollout the game all the way to the end to see who wins, will definitively improve the final result of our trained model. However, its field is not aligned with the Deep Learning subject.
 
 
-###Conclusions
+### Conclusions
 
 According to all experiments that have been illustrated with tables and graphs in section 2.2, we conclude several factors which could affect model’s performance.
 
@@ -68,7 +68,7 @@ Our result is not as good as Facebook’s Darkforest model. Although many factor
 
 Our best training results is trained with a 7 convolutional layer model, using 4,200 games from GoGoD, for 24 hours while Facebook’s result has 144,748 games, trained with 12 convolutional layer model and takes 2 weeks to finish the training process with 50 epochs.  
 
-###Further work:
+### Further work:
 
 - Resume a previously trained model by logging the model and last trained epoch number so as to have on-call inspection and save more time if continuous training may show some promising result.
 - Try new feature planes. Prevalent patterns of Go Game have been broadly mastered and professional players seems very sensitive to these patterns and they would have counterplan for each pattern either.  Since our prediction process is pattern recognize process, using more pattern mask on board will help the outcome of a model have better performance.  
@@ -76,7 +76,7 @@ Our best training results is trained with a 7 convolutional layer model, using 4
 - Of course, the other part of the very fundamental neural network as described in the original paper - the value network, which can help reduce the hundreds of possibility of moves down to a handful of more promising moves. While the policy network evaluate the breadth of the network, the value network can be devised as some representative depth level of the ‘possibility tree’. By leveraging MCTS; instead of brute-force, we can localize a specific depth of the game, then find the more-likely-to-win path and continue the training with our policy network. This will not only enable faster training but also the utter purpose of the Go Game - to win a game.
 
 
-###Reference
+### Reference
 
 - Training data set: GoGoD [URL: http://gogodonline.co.uk/]
 - Yuandong Tian, Yan Zhu. Better Computer Go Player with Neural Network and Long-term Prediction. arXiv:1511.06410 [cs.LG] 2016.
